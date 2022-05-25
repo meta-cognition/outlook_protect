@@ -34,25 +34,7 @@ OutlookProtect:
 		ControlGetText, winVerify, Static14, A
 		if (winVerify = "Delivery options")
 		{
-			Random, randomMinute, 1, 9
-			dayNumber := A_WDay
-			;msgbox % A_WDay
-			Switch dayNumber
-			{
-				case 6:
-					additionalDays	:= 3
-				case 7:
-					additionalDays	:= 2
-				Default:	
-					additionalDays := 1
-			}
-			currentTime := A_Now
-			EnvAdd, currentTime, % additionalDays, Days
-			futureTime := currentTime
-			FormatTime, futureDate, % futureTime, M/d/yyyy
-			deliveryTime := "5:3" randomMinute " AM"
-			ControlSetText, RichEdit20WPT2, % futureDate, A
-			ControlSetText, RichEdit20WPT3, % deliveryTime, A
+			msgbox delay delivery detected
 		}
 		
 	}

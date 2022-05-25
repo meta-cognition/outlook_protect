@@ -36,7 +36,7 @@ OutlookProtect:
 		{
 			Random, randomMinute, 1, 9
 			dayNumber := A_WDay
-			;msgbox % A_WDay
+			msgbox % A_WDay
 			Switch dayNumber
 			{
 				case 6:
